@@ -1,0 +1,5 @@
+- fazer ajustes na chamada "!N" (tipo assim, digamos que tenham vários números que iniciam com 1, se eu digitar !1, 
+ele vai pegar todos os comandos que começarem com 1, Ex:"10, 11, 12, 13, 14, 15", mas ele vai retornar o último, 
+já que o loop da função roda todos os comandos do historico)
+
+- fazer os comandos chamados por "!N" e "!!" serem adicionados novamente no histórico

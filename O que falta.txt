@@ -1,1 +1,0 @@
-- Fazer os comandos chamados por "!N" e "!!" serem adicionados novamente no histórico

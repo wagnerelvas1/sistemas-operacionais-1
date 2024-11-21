@@ -7,7 +7,7 @@ contador = 0
 while True:
     shell = input('unix-shell> ')
 
-    if shell != '!!' and shell != 'history' and not shell.strip().startswith('!') :
+    if shell != 'history' and not shell.strip().startswith('!') :
         contador += 1
         adicionarComandoHistorico(historico, contador, shell)
 
