@@ -1,1 +1,1 @@
-- impedir a adição de None no histórico (!! e !N)
+- Comentar o código

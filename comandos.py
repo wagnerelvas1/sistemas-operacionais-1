@@ -1,5 +1,3 @@
-from historico import *
-
 import os
 import shlex
 
