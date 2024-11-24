@@ -2,13 +2,15 @@ from comandos import *
 from historico import *
 
 historico = []
-contador = 0 # Contador de comandos
+contador = 0
 
 while True:
-    shell = input('unix-shell> ').strip() # Entrada de comandos
+    shell = input('unix-shell> ').strip()
 
     if shell == 'exit':
         break
+    elif not shell:
+        pass
     elif shell == 'history':
         printarHistorico(historico)
     elif shell == '!!':
