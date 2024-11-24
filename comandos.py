@@ -26,8 +26,8 @@ def executarIndiceComando(historico, indice):
         try:
             indice = str(indice)
             for x in historico:
-                if x.startswith(indice):
-                    comando = x[len(indice)+1:]
+                if x[:len(indice)+1].strip() == indice:
+                    comando = x[len(indice)+1:].strip()
             executarComando(comando)
             return comando
         except:
