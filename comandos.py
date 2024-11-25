@@ -15,7 +15,7 @@ def executarComando(comando): # Recebe a variável comando como parâmetro
 
 def executarUltimoComando(historico): # Recebe o histórico como parâmetro
     if bool(historico): # Verifica se o histórico possui algum comando
-        comando = historico[-1][2:].strip() # Guarda na variável comando o último comando do histórico
+        comando = historico[-1][historico[-1].find(' ')+1:] # Guarda na variável comando o último comando do histórico, retirando o índice
         executarComando(comando) # Executa o comando
         return comando # Retorna o comando
     else: # Caso o histórico esteja vazio
@@ -26,8 +26,8 @@ def executarIndiceComando(historico, indice): # Recebe o histórico e indice com
         try:
             indice = str(indice) # Transforma o índice em string
             for x in historico: # Loop que percorre o histórico
-                if x[:len(indice)+1].strip() == indice: # Caso o número do comando no histórico seja igual ao índice
-                    comando = x[len(indice)+1:].strip() # Guarda na variável comando 0 comando presente no histórico
+                if x[:x.find(' ')] == indice: # Caso o índice do comando no histórico seja igual ao índice informado pelo usuário
+                    comando = x[x.find(' ')+1:] # Guarda na variável comando o comando correpondente
             executarComando(comando) # Executa o comando
             return comando # Retorna o comando
         except: # Trata o erro no caso de índice não encontrado
