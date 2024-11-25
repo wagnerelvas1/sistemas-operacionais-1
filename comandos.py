@@ -15,7 +15,7 @@ def executarComando(comando):
 
 def executarUltimoComando(historico):
     if bool(historico):
-        comando = historico[-1][2:].strip()
+        comando = historico[-1][historico[-1].find(' ')+1:]
         executarComando(comando)
         return comando
     else:
@@ -26,8 +26,8 @@ def executarIndiceComando(historico, indice):
         try:
             indice = str(indice)
             for x in historico:
-                if x[:len(indice)+1].strip() == indice:
-                    comando = x[len(indice)+1:].strip()
+                if x[:x.find(' ')] == indice:
+                    comando = x[x.find(' ')+1:]
             executarComando(comando)
             return comando
         except:
